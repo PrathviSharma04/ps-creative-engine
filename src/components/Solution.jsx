@@ -45,12 +45,12 @@ export default function Solution() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="solution" className="py-40 px-6 relative overflow-hidden bg-bg-secondary border-y border-white/5">
+    <section ref={sectionRef} id="solution" className="py-40 px-6 relative overflow-hidden bg-bg-secondary border-y border-text-primary/5">
       {/* Decorative Parallax Shapes */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
         <div className="solution-shape absolute w-64 h-64 border border-accent-primary rounded-full top-[10%] -left-10 opacity-30"></div>
         <div className="solution-shape absolute w-96 h-96 bg-accent-primary mix-blend-overlay blur-[120px] rounded-full bottom-[20%] right-[-10%] opacity-20"></div>
-        <div className="solution-shape absolute w-32 h-32 border border-white rounded-lg rotate-12 top-[60%] left-[15%] opacity-10"></div>
+        <div className="solution-shape absolute w-32 h-32 border border-text-primary rounded-lg rotate-12 top-[60%] left-[15%] opacity-10"></div>
       </div>
 
       <div className="max-w-6xl mx-auto flex flex-col items-center text-center relative z-10">

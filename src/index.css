@@ -16,11 +16,13 @@
 :root {
   /* High Contrast Deep Tech / Cinematic BW Palette */
   --bg-primary: #050505;
-  --bg-secondary: #111111;
+  --bg-secondary: #0A0A0A;
   --text-primary: #FFFFFF;
   --text-secondary: #888888;
   --accent-primary: #CCFF00; /* Viral Acid Green */
   --accent-hover: #99CC00;
+
+
 
   /* Typography System: Minimal Tech */
   --font-display: 'Space Grotesk', sans-serif;
@@ -36,6 +38,38 @@
   /* Spacing */
   --grid-gap: clamp(1rem, 2vw, 2rem);
   --grid-margin: clamp(1.5rem, 5vw, 4rem);
+}
+
+.light {
+  --bg-primary: #FDFDFD;
+  --bg-secondary: #F3F3F3;
+  --text-primary: #050505;
+  --text-secondary: #666666;
+  --accent-primary: #0033FF; /* Cinematic Sharp Blue */
+  --accent-hover: #0022CC;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 1.2s;
+  animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+  mix-blend-mode: normal;
+}
+::view-transition-old(root) {
+  z-index: 1;
+  animation: none;
+}
+::view-transition-new(root) {
+  z-index: 2;
+  animation: theme-reveal 1.2s cubic-bezier(0.76, 0, 0.24, 1);
+}
+@keyframes theme-reveal {
+  from {
+    clip-path: circle(0px at var(--click-x, 50%) var(--click-y, 50%));
+  }
+  to {
+    clip-path: circle(150vmax at var(--click-x, 50%) var(--click-y, 50%));
+  }
 }
 
 html.lenis, html.lenis body {
@@ -64,9 +98,14 @@ body {
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+
+* {
+  backface-visibility: hidden;
 }
 
 h1, .font-display {

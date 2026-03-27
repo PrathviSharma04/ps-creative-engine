@@ -64,9 +64,9 @@ export default function HowItWorks() {
       {/* The Scroll Track */}
       <div className="relative pl-6 md:pl-[10vw] flex flex-col justify-center min-h-[50vh]">
         {/* Progress Line Background */}
-        <div className="absolute top-[80px] left-0 w-full h-px bg-white/10 z-0"></div>
+        <div className="absolute top-[80px] left-0 w-full h-px bg-text-primary/10 z-0"></div>
         {/* Progress Line Fill */}
-        <div className="progress-line-fill absolute top-[80px] left-0 h-px bg-accent-primary z-10 w-0 drop-shadow-[0_0_8px_rgba(204,255,0,0.8)]"></div>
+        <div className="progress-line-fill absolute top-[80px] left-0 h-px bg-accent-primary z-10 w-0 shadow-[0_0_8px_var(--color-accent-primary)]"></div>
 
         <div ref={trackRef} className="flex gap-20 md:gap-40 w-max pr-[20vw]">
           {steps.map((step, idx) => (
@@ -81,13 +81,13 @@ export default function HowItWorks() {
               </p>
               
               {/* Decorative wireframe element */}
-              <div className="mt-12 h-32 w-full wireframe-card rounded flex items-center justify-center border-white/5 bg-white-[0.02]">
+              <div className="mt-12 h-32 w-full wireframe-card rounded flex items-center justify-center border-text-primary/5 bg-text-primary/[0.02]">
                  <div className="flex gap-2 opacity-30">
-                   <div className="w-1 h-8 bg-white/20"></div>
-                   <div className="w-1 h-12 bg-white/20"></div>
+                   <div className="w-1 h-8 bg-text-primary/20"></div>
+                   <div className="w-1 h-12 bg-text-primary/20"></div>
                    <div className="w-1 h-4 bg-accent-primary"></div>
-                   <div className="w-1 h-16 bg-white/20"></div>
-                   <div className="w-1 h-8 bg-white/20"></div>
+                   <div className="w-1 h-16 bg-text-primary/20"></div>
+                   <div className="w-1 h-8 bg-text-primary/20"></div>
                  </div>
               </div>
             </div>

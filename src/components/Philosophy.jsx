@@ -35,16 +35,16 @@ export default function Philosophy() {
       <div className="max-w-[1440px] mx-auto text-center w-full">
         <h2 className="font-display text-[clamp(2.5rem,7vw,7.5rem)] leading-[0.9] tracking-tighter mx-auto flex flex-col gap-6 uppercase">
           <div className="pb-4">
-            <span className="phil-line block text-white/30">If it looks generic,</span>
+            <span className="phil-line block text-text-primary/30">If it looks generic,</span>
           </div>
           <div className="pb-4">
-            <span className="phil-line block line-through decoration-4 decoration-red-600 text-white/50">it's rejected.</span>
+            <span className="phil-line block line-through decoration-4 decoration-red-600 text-text-primary/50">it's rejected.</span>
           </div>
           <div className="pb-4 pt-12 md:pt-20">
-            <span className="phil-line block text-white/60">If it feels average,</span>
+            <span className="phil-line block text-text-primary/60">If it feels average,</span>
           </div>
           <div className="pb-4">
-            <span className="phil-line block line-through decoration-4 decoration-red-600 text-white/80">it's rebuilt.</span>
+            <span className="phil-line block line-through decoration-4 decoration-red-600 text-text-primary/80">it's rebuilt.</span>
           </div>
           <div className="pb-4 pt-12 md:pt-20">
             <span className="phil-line block text-text-primary">If it wouldn't win awards,</span>

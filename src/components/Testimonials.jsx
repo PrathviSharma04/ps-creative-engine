@@ -35,7 +35,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section ref={container} className="py-32 px-6 bg-bg-primary border-y border-white/5 relative">
+    <section ref={container} className="py-32 px-6 bg-bg-primary border-y border-text-primary/5 relative">
       <div className="max-w-[1440px] mx-auto">
         
         <h2 className="font-display text-[clamp(2.5rem,5vw,4.5rem)] leading-none text-text-primary uppercase tracking-tighter mb-20">

@@ -42,7 +42,7 @@ export default function Tools() {
   }, []);
 
   return (
-    <section id="tools" className="py-32 px-6 bg-bg-primary border-y border-white/5 relative">
+    <section id="tools" className="py-32 px-6 bg-bg-primary border-y border-text-primary/5 relative">
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent-primary/5 rounded-full blur-[150px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -59,14 +59,14 @@ export default function Tools() {
                 className="tool-card group p-8 flex flex-col items-start gap-12 wireframe-card rounded-xl hover:-translate-y-2 cursor-none relative overflow-hidden bg-bg-secondary"
               >
                 {/* Subtle hover gradient fade-in */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(204,255,0,0.1)_0%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-700 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 50% 0%, var(--color-accent-primary) 0%, transparent 100%)' }}></div>
 
-                <div className="p-4 bg-white/5 rounded-lg border border-white/10 z-10 group-hover:scale-110 transition-transform duration-500 group-hover:border-accent-primary/50 group-hover:bg-accent-primary/10">
+                <div className="p-4 bg-text-primary/5 rounded-lg border border-text-primary/10 z-10 group-hover:scale-110 transition-transform duration-500 group-hover:border-accent-primary/50 group-hover:bg-accent-primary/10">
                   <Icon className="w-6 h-6 text-text-primary group-hover:text-accent-primary transition-colors" strokeWidth={1.5} />
                 </div>
                 
                 <div className="z-10 mt-auto">
-                  <h4 className="font-mono text-sm uppercase tracking-[0.2em] text-text-primary mb-3 bg-white/5 inline-block px-3 py-1 rounded border border-white/10 group-hover:border-accent-primary/30 group-hover:text-accent-primary transition-colors">{tool.name}</h4>
+                  <h4 className="font-mono text-sm uppercase tracking-[0.2em] text-text-primary mb-3 bg-text-primary/5 inline-block px-3 py-1 rounded border border-text-primary/10 group-hover:border-accent-primary/30 group-hover:text-accent-primary transition-colors">{tool.name}</h4>
                   <p className="text-text-secondary leading-relaxed">{tool.desc}</p>
                 </div>
               </div>
