@@ -28,7 +28,7 @@ export default function FinalCTA() {
   }, []);
 
   return (
-    <section ref={ctaRef} className="py-52 px-6 relative overflow-hidden bg-bg-primary border-t border-text-primary/5">
+    <section id="final-cta" ref={ctaRef} className="py-52 px-6 relative overflow-hidden bg-bg-primary border-t border-text-primary/5">
       <div className="absolute inset-0 pointer-events-none flex items-center justify-center opacity-30">
         <div className="w-[800px] h-[800px] bg-accent-primary/10 rounded-full blur-[150px]"></div>
       </div>
@@ -38,11 +38,17 @@ export default function FinalCTA() {
           Initialize <br/><span className="italic text-accent-primary font-light">The Engine.</span>
         </h2>
 
-        <div className="inline-block hover-target cursor-none group">
+        <div 
+          onClick={() => {
+            navigator.clipboard.writeText('npm i ps-creative-engine');
+            window.dispatchEvent(new CustomEvent('show-toast'));
+          }}
+          className="inline-block hover-target cursor-none group active:scale-95 transition-transform duration-200"
+        >
           <div className="relative px-12 py-8 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 bg-bg-secondary rounded-2xl border border-text-primary/10 transition-transform duration-500 group-hover:scale-105 group-hover:border-accent-primary/50 overflow-hidden">
             <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-700 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 50% 0%, var(--color-accent-primary) 0%, transparent 100%)' }}></div>
             
-            <code className="text-text-primary font-mono text-xl md:text-3xl font-medium tracking-widest relative z-10">npm i ps-creative-engine</code>
+            <code className="text-text-primary font-mono text-xl md:text-3xl font-medium tracking-widest relative z-10 text-center">npm i ps-creative-engine</code>
             
             <div className="hidden md:block w-px h-12 bg-text-primary/20 relative z-10"></div>
             

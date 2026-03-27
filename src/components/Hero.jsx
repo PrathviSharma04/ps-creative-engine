@@ -57,7 +57,14 @@ export default function Hero() {
               <div className="relative px-8 py-5 flex items-center gap-6 bg-bg-secondary rounded-xl border border-text-primary/10">
                 <code className="text-text-primary font-mono text-lg font-medium tracking-widest">npm i ps-creative-engine</code>
                 <div className="w-px h-6 bg-text-primary/20"></div>
-                <button className="text-accent-primary group-hover:text-text-primary transition-colors hover:scale-110">
+                <button 
+                  onClick={() => {
+                    navigator.clipboard.writeText('npm i ps-creative-engine');
+                    window.dispatchEvent(new CustomEvent('show-toast'));
+                  }}
+                  className="text-accent-primary group-hover:text-text-primary transition-all hover:scale-125 active:scale-90"
+                  aria-label="Copy install command"
+                >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
                 </button>
               </div>

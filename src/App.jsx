@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 // Critical components loaded immediately
 import Header from './components/Header';
+import Toast from './components/Toast';
 import CustomCursor from './components/CustomCursor';
 import Hero from './components/Hero';
 
@@ -33,6 +34,9 @@ function App() {
       smoothTouch: true,
     });
 
+    // Make lenis accessible globally for scrollTo functionality
+    window.lenis = lenis;
+
     // 2. Connect Lenis to GSAP
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add((time) => {
@@ -59,6 +63,7 @@ function App() {
   return (
     <div className="bg-bg-primary text-text-primary overflow-hidden min-h-screen font-body selection:bg-accent-primary selection:text-bg-primary">
       <CustomCursor />
+      <Toast />
       <Header />
       <Hero />
       <Suspense fallback={<Fallback />}>
